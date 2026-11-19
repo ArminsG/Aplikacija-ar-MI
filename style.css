@@ -1,0 +1,88 @@
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  background: #f2f4f7;
+  color: #1f2933;
+}
+
+.app {
+  max-width: 520px;
+  margin: 40px auto;
+  padding: 24px;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+}
+
+h1 { margin: 0 0 16px; font-size: 1.6rem; }
+
+.task-form { display: flex; gap: 8px; }
+
+.task-form input,
+.edit-input {
+  flex: 1;
+  padding: 10px 12px;
+  font-size: 1rem;
+  border: 1px solid #cbd2d9;
+  border-radius: 8px;
+}
+
+.task-form input:focus,
+.edit-input:focus { outline: 2px solid #3b82f6; border-color: transparent; }
+
+button {
+  font: inherit;
+  cursor: pointer;
+  border: none;
+  border-radius: 8px;
+}
+
+#add-btn { padding: 10px 16px; background: #2563eb; color: #fff; }
+#add-btn:hover { background: #1d4ed8; }
+
+.error { min-height: 1.2em; margin: 6px 0 0; color: #b91c1c; font-size: 0.9rem; }
+
+.filters { display: flex; gap: 6px; margin: 12px 0; }
+.filter { padding: 6px 12px; background: #e4e7eb; }
+.filter.active { background: #1f2933; color: #fff; }
+
+.task-list { list-style: none; margin: 0; padding: 0; }
+
+.task {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 4px;
+  border-bottom: 1px solid #e4e7eb;
+}
+
+.task input[type="checkbox"] { width: 18px; height: 18px; cursor: pointer; }
+.task .text { flex: 1; word-break: break-word; }
+.task.done .text { text-decoration: line-through; color: #9aa5b1; }
+
+.task .actions button { padding: 4px 8px; background: transparent; color: #52606d; }
+.task .actions button:hover { background: #e4e7eb; }
+.task .delete-btn:hover { color: #b91c1c; }
+
+.empty { color: #7b8794; text-align: center; margin: 16px 0; }
+
+.footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 12px;
+  font-size: 0.9rem;
+  color: #52606d;
+}
+
+.link-btn { background: none; color: #2563eb; padding: 4px; }
+.link-btn:hover { text-decoration: underline; }
+
+.visually-hidden {
+  position: absolute;
+  width: 1px; height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+}

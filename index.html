@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="lv">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mani uzdevumi</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="app">
+    <h1>Mani uzdevumi</h1>
+
+    <form id="task-form" class="task-form" autocomplete="off">
+      <label for="task-input" class="visually-hidden">Jauns uzdevums</label>
+      <input id="task-input" type="text" maxlength="200" placeholder="Ko vajag izdarīt?">
+      <button type="submit" id="add-btn">Pievienot</button>
+    </form>
+    <p id="error" class="error" role="alert" aria-live="polite"></p>
+
+    <div class="filters" role="group" aria-label="Filtri">
+      <button type="button" class="filter active" data-filter="all">Visi</button>
+      <button type="button" class="filter" data-filter="active">Aktīvie</button>
+      <button type="button" class="filter" data-filter="done">Izpildītie</button>
+    </div>
+
+    <ul id="task-list" class="task-list"></ul>
+    <p id="empty" class="empty">Nav neviena uzdevuma.</p>
+
+    <footer class="footer">
+      <span id="counter">Atlikuši: 0</span>
+      <button type="button" id="clear-done" class="link-btn">Dzēst izpildītos</button>
+    </footer>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
